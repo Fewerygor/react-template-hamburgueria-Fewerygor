@@ -1,0 +1,22 @@
+.modalCard {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 452.311px;
+    height: 80px;
+
+    .CardContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .cardProduct {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10px;
+        color: #333;
+    }
+}

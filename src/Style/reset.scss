@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+input {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
