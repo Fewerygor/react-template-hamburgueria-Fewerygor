@@ -1,5 +1,5 @@
 import { ProductCard } from "./ProductCard";
-import styles from "./style.module.scss"
+import styles from "./style.module.scss";
 
 export const ProductList = ({ productList, addCartProduct }) => {
    return (

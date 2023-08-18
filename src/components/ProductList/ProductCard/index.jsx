@@ -1,9 +1,11 @@
-import styles from "./style.module.scss"
+import styles from "./style.module.scss";
 
 export const ProductCard = ({ product, addCartProduct }) => {
     return (
         <li className={styles.cardList}>
-            <img src={product.img} alt={product.name} />
+            <div className={styles.imageContainer}>
+                <img src={product.img} alt={product.name} />
+            </div>
             <div className={styles.cardContainer}>
                 <div className={styles.cardBox}>
                     <h3>{product.name}</h3>

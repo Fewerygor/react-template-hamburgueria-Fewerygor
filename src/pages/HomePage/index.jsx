@@ -3,18 +3,21 @@ import { CartModal } from "../../components/CartModal";
 import { Header } from "../../components/Header";
 import { ProductList } from "../../components/ProductList";
 import { api } from "../../api";
+import { toast } from "react-toastify";
 
 export const HomePage = () => {
    const [productList, setProductList] = useState([]);
    const localCart = localStorage.getItem('@cartProduct'); 
    const [cartList, setCartList] = useState(localCart ? JSON.parse(localCart) : []);
    const [isOpen, setIsOpen] = useState(false);
+   const [saveProductList, setSaveProductList] = useState([]);
 
    useEffect(() => {
       const getProduct = async () => {
          try {
             const { data } = await api.get("/products")
             setProductList(data);
+            setSaveProductList(data);
          } catch (error) {
             console.log(error)
          }
@@ -29,8 +32,9 @@ export const HomePage = () => {
    const addCartProduct = (product) => {
       if (!cartList.some(cartList => cartList.id == product.id)) {
          setCartList([...cartList, product])
+         toast.success('Produto foi adicionado no carrinho!')
       } else {
-         alert('Esse produto já foi adicionado')
+         toast.error('Esse produto já foi adicionado!')
       }
    }
 
@@ -48,7 +52,12 @@ export const HomePage = () => {
 
    return (
       <>
-         <Header setIsOpen={setIsOpen} />
+         <Header setIsOpen={setIsOpen} 
+         productList={productList} 
+         setProductList={setProductList} 
+         saveProductList={saveProductList}
+         cartList={cartList}
+         />
          <main>
             <ProductList productList={productList}
                addCartProduct={addCartProduct}

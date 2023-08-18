@@ -2,8 +2,12 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    width: 452.311px;
+    width: 430px;
     height: 80px;
+
+    @media (max-width: 600px) {
+        width: 332px;
+    }
 
     .CardContainer {
         display: flex;
@@ -18,5 +22,13 @@
         align-items: flex-start;
         gap: 10px;
         color: #333;
+
+        img {
+            width: 55px;
+            height: 53.49px;
+            flex-shrink: var(--shrink);
+            border-radius: 5px;
+            background: var(--gray-100);
+        }
     }
 }

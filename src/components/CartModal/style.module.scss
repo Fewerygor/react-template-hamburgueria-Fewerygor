@@ -5,7 +5,7 @@
     align-items: flex-start;
     position: fixed;
     width: 500px;
-    
+
 
     .modalHeader {
         display: flex;
@@ -16,9 +16,14 @@
         border-radius: 5px 5px 0px 0px;
         background: var(--color-primary);
 
+        @media (max-width: 600px) {
+            width: 375px;
+        }
+
         .modalTitle {
             display: flex;
             flex-direction: row;
+            align-items: center;
             justify-content: space-between;
             width: 456px;
             height: 28px;
@@ -34,6 +39,13 @@
                 line-height: 28px;
                 flex-shrink: var(--shrink);
             }
+
+            button {
+                width: 12px;
+                height: 24px;
+                flex-shrink: 0;
+                color: #FFFFFF;
+            }
         }
     }
 
@@ -43,6 +55,7 @@
         justify-content: center;
         width: 100%;
         max-width: 500px;
+        height: 300px;
         padding: 20px;
         align-items: center;
         gap: 18px;
@@ -50,18 +63,57 @@
         border: 1px solid var(--grey-0);
         background: #FFF;
 
+        @media (max-width: 600px) {
+            width: 375px;
+        }
+
         .modalList {
             display: flex;
             width: 452.311px;
-            height: 80px;
+            overflow-y: scroll;
+
+            @media (max-width: 600px) {
+                width: 332px;
+            }
+
+            .list {
+                max-height: 250px;
+                height: 100%;
+            }
+
         }
     }
 
     .totalContainer {
+        display: flex;
+        flex-direction: column;
         width: 454px;
-        height: 104px;
+        height: 121px;
+        padding-top: 20px;
         flex-shrink: var(--shrink);
         border-top: 3px solid var(--gray-100);
+        gap: 30px;
+
+        @media (max-width: 600px) {
+            width: 352px;
+        }
+
+        .totalValueContainer {
+            display: flex;
+            justify-content: space-between;
+
+            .textSpan {
+                color: var(--gray-600);
+                font-size: var(--font-size-1);
+                font-style: normal;
+                font-weight: 600;
+                line-height: 24px;
+            }
+
+            .valueSpan {
+                color: var(--gray-300);
+            }
+        }
 
         .buttonRemoveAll {
             display: flex;
@@ -79,6 +131,10 @@
             flex-shrink: 0;
             border-radius: 8px;
             background: var(--gray-4);
+
+            @media (max-width: 600px) {
+                width: 352px;
+            }
         }
     }
 }

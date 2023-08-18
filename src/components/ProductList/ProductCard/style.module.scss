@@ -4,6 +4,7 @@
         border: 2px solid #27AE60;
         background: #FFF;
     }
+
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -12,6 +13,23 @@
     border-radius: 5px;
     border: 2px solid var(--gray-4);
     background: #FFF;
+
+    .imageContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 297px;
+        height: 150px;
+        flex-shrink: 0;
+        background: var(--gray-0);
+        border-radius: 5px;
+
+        img {
+            width: 162px;
+            height: 162px;
+            flex-shrink: 0;
+        }
+    }
 
     .cardContainer {
         width: 300px;
@@ -42,7 +60,7 @@
                     border: 2px solid var(--color-primary);
                     background: var(--color-primary);
                 }
-                
+
                 display: inline-flex;
                 height: 40px;
                 padding: 0px 20px;
