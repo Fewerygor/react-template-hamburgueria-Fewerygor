@@ -12,7 +12,7 @@ export const Header = ({ setIsOpen, setProductList, saveProductList, cartList })
       e.preventDefault();
       if (value.length !== 0) {
          console.log(value)
-         const productFiltered = saveProductList.filter(product => product.name.toLowerCase().includes(value.toLowerCase));
+         const productFiltered = saveProductList.filter(product => product.name.toLowerCase().includes(value.toLowerCase()));
          setProductList(productFiltered);
       } else {
          setProductList(saveProductList);
