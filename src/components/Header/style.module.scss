@@ -5,7 +5,7 @@ header {
     width: 100%;
     max-width: 1600px;
     height: 80px;
-    flex: var(--shrink);
+    // flex: var(--shrink);
     background-color: var(--gray-0);
 
     @media (max-width: 600px) {
@@ -19,7 +19,7 @@ header {
         width:100%;
         max-width: 1368px;
         height: 60px;
-        flex-shrink: var(--shrink);
+        // flex-shrink: var(--shrink);
 
         @media (max-width: 600px) {
             display: flex;
@@ -29,7 +29,7 @@ header {
         .logoHeader {
             @media (max-width: 600px) {
                 position: relative;
-                right: 80px;
+                right: 35px;
             }
         }
     }
@@ -40,24 +40,25 @@ header {
         gap: 10px;
 
         .buttonCart {
+            position: relative;
             display: flex;
             align-items: center;
             color: var(--gray-4);
-
+            
             @media (max-width: 600px) {
                 display: flex;
-                position: relative;
-                bottom: 50px;
-                left: 390px;
+                left: 87%;
+                bottom: 80%;
+                
             }
             
             span {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                position: relative;
-                bottom: 15px;
-                right: 12px;
+                position: absolute;
+                top: 5px;
+                left: 12px;
                 width: 17px;
                 height: 21px;
                 color: #FFF;
@@ -65,7 +66,7 @@ header {
                 font-style: normal;
                 font-weight: 900;
                 line-height: 0px;
-                flex-shrink: var(--shrink);
+                // flex-shrink: var(--shrink);
                 border-radius: 7px;
                 background: var(--color-primary);
             }
@@ -77,13 +78,19 @@ header {
             align-items: center;
             justify-content: space-between;
             padding: 0px 10px 0px 15px;
-            width: 365px;
+            width: 100%;
+            max-width: 365px;
             height: 60px;
-            flex-shrink: var(--shrink);
+            // flex-shrink: var(--shrink);
             border-radius: 8px;
             border: 2px solid var(--gray-100);
             background: #FFF;
 
+            input{
+                width: 100%;
+                max-width: 382px;
+            }
+            
             input::placeholder {
                 color: var(--gray-100);
             }

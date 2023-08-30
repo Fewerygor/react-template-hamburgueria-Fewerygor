@@ -1,6 +1,8 @@
 .list {
     display: flex;
     flex-wrap: wrap;
+    // flex-shrink: var(--shrink);
+    width: 100%;
     max-width: 1368px;
     height: 744px;
     padding-top: 15px;

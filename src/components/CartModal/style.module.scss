@@ -1,53 +1,55 @@
 .modalContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
     position: fixed;
-    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);;
 
+    .modalControler {
+        width: 90%;
+        max-width: 500px;
+        height: 411px;
 
-    .modalHeader {
-        display: flex;
-        align-items: flex-start;
-        width: 500px;
-        padding: 13px 22px;
-        gap: 10px;
-        border-radius: 5px 5px 0px 0px;
-        background: var(--color-primary);
-
-        @media (max-width: 600px) {
-            width: 375px;
-        }
-
-        .modalTitle {
+        .modalHeader {
             display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            width: 456px;
-            height: 28px;
-            font-size: var(--font-size-3);
-            font-weight: 700;
-            line-height: 28px;
+            align-items: flex-start;
+            width: 100%;
+            padding: 13px 22px;
+            border-radius: 5px 5px 0px 0px;
+            background: var(--color-primary);
 
-            h2 {
-                color: #FFF;
+            .modalTitle {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 95%;
+                height: 28px;
                 font-size: var(--font-size-3);
-                font-style: normal;
                 font-weight: 700;
                 line-height: 28px;
-                flex-shrink: var(--shrink);
-            }
 
-            button {
-                width: 12px;
-                height: 24px;
-                flex-shrink: 0;
-                color: #FFFFFF;
+                h2 {
+                    color: #FFF;
+                    font-size: var(--font-size-3);
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 28px;
+                    flex-shrink: var(--shrink);
+                }
+
+                button {
+                    width: 12px;
+                    height: 24px;
+                    flex-shrink: 0;
+                    color: #FFFFFF;
+                }
             }
         }
     }
+
 
     .modalMain {
         display: flex;
@@ -63,20 +65,13 @@
         border: 1px solid var(--grey-0);
         background: #FFF;
 
-        @media (max-width: 600px) {
-            width: 375px;
-        }
-
         .modalList {
             display: flex;
-            width: 452.311px;
+            width: 100%;
             overflow-y: scroll;
 
-            @media (max-width: 600px) {
-                width: 332px;
-            }
-
             .list {
+                width: 100%;
                 max-height: 250px;
                 height: 100%;
             }
@@ -87,16 +82,12 @@
     .totalContainer {
         display: flex;
         flex-direction: column;
-        width: 454px;
+        width: 100%;
         height: 121px;
         padding-top: 20px;
         flex-shrink: var(--shrink);
         border-top: 3px solid var(--gray-100);
         gap: 30px;
-
-        @media (max-width: 600px) {
-            width: 352px;
-        }
 
         .totalValueContainer {
             display: flex;
@@ -119,7 +110,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 454px;
+            width: 95%;
             height: 60px;
             padding: 0px 20px;
             gap: 10px;
@@ -131,10 +122,6 @@
             flex-shrink: 0;
             border-radius: 8px;
             background: var(--gray-4);
-
-            @media (max-width: 600px) {
-                width: 352px;
-            }
         }
     }
 }

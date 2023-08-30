@@ -13,34 +13,36 @@ export const CartModal = ({ cartList, removeCartProduct, setIsOpen, setCartList 
 
    return (
       <div className={styles.modalContainer} role="dialog">
-         <div className={styles.modalHeader}>
-            <div className={styles.modalTitle}>
-               <h2>Carrinho de compras</h2>
-               <button aria-label="close" title="Fechar" onClick={() => setIsOpen(false)}>
-                  <MdClose size={21} />
-               </button>
-            </div>
-         </div>
-         <div className={styles.modalMain}>
-            <div className={styles.modalList}>
-               <ul className={styles.list}>
-                  {cartList.map((product) => (
-                     <CartItemCard key={product.id}
-                        product={product}
-                        removeCartProduct={removeCartProduct}
-                     />
-                  ))}
-               </ul>
-            </div>
-            <div className={styles.totalContainer}>
-               <div className={styles.totalValueContainer}>
-                  <span className={styles.textSpan}>Total</span>
-                  <span className={styles.valueSpan}>{total.toLocaleString('pt-BR',
-                     { style: "currency", currency: "BRL" })}
-                  </span>
+         <div className={styles.modalControler}>
+            <div className={styles.modalHeader}>
+               <div className={styles.modalTitle}>
+                  <h2>Carrinho de compras</h2>
+                  <button aria-label="close" title="Fechar" onClick={() => setIsOpen(false)}>
+                     <MdClose size={21} />
+                  </button>
                </div>
-               <button className={styles.buttonRemoveAll}
-                  onClick={cleanModal}>Remover todos</button>
+            </div>
+            <div className={styles.modalMain}>
+               <div className={styles.modalList}>
+                  <ul className={styles.list}>
+                     {cartList.map((product) => (
+                        <CartItemCard key={product.id}
+                           product={product}
+                           removeCartProduct={removeCartProduct}
+                        />
+                     ))}
+                  </ul>
+               </div>
+               <div className={styles.totalContainer}>
+                  <div className={styles.totalValueContainer}>
+                     <span className={styles.textSpan}>Total</span>
+                     <span className={styles.valueSpan}>{total.toLocaleString('pt-BR',
+                        { style: "currency", currency: "BRL" })}
+                     </span>
+                  </div>
+                  <button className={styles.buttonRemoveAll}
+                     onClick={cleanModal}>Remover todos</button>
+               </div>
             </div>
          </div>
       </div>
